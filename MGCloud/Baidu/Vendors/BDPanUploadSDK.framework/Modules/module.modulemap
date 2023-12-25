@@ -1,0 +1,5 @@
+framework module BDPanUploadSDK {
+    umbrella header "BDPanUploadSDK.h"
+    export *
+    module * { export * }
+}

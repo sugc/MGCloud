@@ -1,0 +1,5 @@
+framework module BDPanOpenPlatformDownloadSDK {
+    umbrella header "BDPanOpenPlatformDownloadSDK.h"
+    export *
+    module * { export * }
+}

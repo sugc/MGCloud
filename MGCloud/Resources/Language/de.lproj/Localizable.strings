@@ -1,0 +1,13 @@
+"网络存储类型" = "Netzwerkspeichertyp";
+"存储根目录" = "Speicherwurzelverzeichnis";
+
+"登录" = "Anmelden";
+"已登录" = "Angemeldet";
+"保存" = "Speichern";
+"根目录不能为空" = "Das Stammverzeichnis darf nicht leer sein";
+"根目录必须为一级目录" = "Das Stammverzeichnis muss ein Top-Level-Verzeichnis sein";
+"根目录不合法，请重新输入" = "Ungültiges Stammverzeichnis, bitte erneut eingeben";
+"请先登录授权" = "Bitte zuerst einloggen und autorisieren";
+
+"保存失败，请重试" = "Speichern fehlgeschlagen, bitte versuchen Sie es erneut";
+"保存成功" = "Speichern erfolgreich";

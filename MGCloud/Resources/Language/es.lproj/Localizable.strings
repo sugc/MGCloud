@@ -1,0 +1,13 @@
+"网络存储类型" = "Tipo de almacenamiento en red";
+"存储根目录" = "Directorio raíz de almacenamiento";
+
+"登录" = "Iniciar sesión";
+"已登录" = "Sesión iniciada";
+"保存" = "Guardar";
+"根目录不能为空" = "El directorio raíz no puede estar vacío";
+"根目录必须为一级目录" = "El directorio raíz debe ser un directorio de nivel superior";
+"根目录不合法，请重新输入" = "Directorio raíz no válido, por favor, vuelva a ingresar";
+"请先登录授权" = "Por favor, inicie sesión para autorizar";
+
+"保存失败，请重试" = "Error al guardar, por favor, inténtelo de nuevo";
+"保存成功" = "Guardado exitoso";

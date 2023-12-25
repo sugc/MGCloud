@@ -1,0 +1,5 @@
+framework module BDPanCloudFileSDK {
+    umbrella header "BDPanCloudFileSDK.h"
+    export *
+    module * { export * }
+}

@@ -1,0 +1,13 @@
+"网络存储类型" = "Network Storage Type";
+"存储根目录" = "Storage Root Directory";
+
+"登录" = "Log In";
+"已登录" = "Logged In";
+"保存" = "Save";
+"根目录不能为空" = "Root directory cannot be empty";
+"根目录必须为一级目录" = "Root directory must be a top-level directory";
+"根目录不合法，请重新输入" = "Invalid root directory, please re-enter";
+"请先登录授权" = "Please log in for authorization";
+
+"保存失败，请重试" = "Save failed, please try again";
+"保存成功" = "Save successful";
