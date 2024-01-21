@@ -1,3 +1,5 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:6ed672779b8554c69f6cb6fda8bbbc81eda3ff6efef665705bfd3c71d784118e
-size 129
+framework module BDPanOpenPlatformSDK {
+    umbrella header "BDPanOpenPlatformHeader.h"
+    export *
+    module * { export * }
+}

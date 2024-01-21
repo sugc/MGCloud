@@ -1,3 +1,29 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:83df039f9efc601b6dea0fd6c99dfaf819d039e3cce6f00f53b8a155bb9b59bc
-size 756
+//
+//  BDPanAutoBackupManagerDelegate.h
+//  BDPanUploadSDK
+//
+//  Created by luochao04 on 2022/12/2.
+//
+
+#import <Foundation/Foundation.h>
+#import "BDPanUploadSDKDefines.h"
+
+NS_ASSUME_NONNULL_BEGIN
+
+@protocol BDPanAutoBackupManagerDelegate <NSObject>
+
+/// 备份状态改变
+/// @param status 改变后的备份状态，也可以使用 autoBackupStatus 方法获取
+- (void)autoBackupStatusChanged:(BDPanAutoBackupState)status;
+
+/// 备份数量改变
+/// @param status 备份状态
+/// @param uploadedCount  已上传数量
+/// @param totalCount 总数量
+- (void)autoBackupCountChanged:(BDPanAutoBackupState)status
+                 uploadedCount:(NSInteger)uploadedCount
+                    totalCount:(NSInteger)totalCount;
+
+@end
+
+NS_ASSUME_NONNULL_END

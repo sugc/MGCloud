@@ -1,3 +1,14 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:75bfe3399b29f3268c3388f5f9c267bd2124111e27571b4c8350816f8afc69ce
-size 399
+//
+//  BDPanUploadSDK.h
+//  BDPanUploadSDK
+//
+//  Created by Cheng,Linhao on 2021/8/30.
+//
+
+#import <BDPanUploadSDK/BDPanUploadSDKManager.h>
+#import <BDPanUploadSDK/BDPanUploadFileModel.h>
+#import <BDPanUploadSDK/BDPanUploadSDKDefines.h>
+#import <BDPanUploadSDK/BDPanUploadModelProtocol.h>
+
+#import <BDPanUploadSDK/BDPanAutoBackupManager.h>
+#import <BDPanUploadSDK/BDPanAutoBackupManagerDelegate.h>

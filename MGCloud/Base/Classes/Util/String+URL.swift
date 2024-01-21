@@ -1,3 +1,23 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:ef2e2199a55c3d3089f97a3f06dfad0dd5b88ea91eb41b5ae894443abfac9eb1
-size 435
+//
+//  String+URL.swift
+//  MGCloud
+//
+//  Created by sugc on 2023/12/9.
+//
+
+import Foundation
+
+public extension String {
+    
+    //字符串直接去除路径
+    public func deletingLastPathComponent()->String! {
+        var res = ""
+        let resArr = self.components(separatedBy: "/")
+        for i in 0..<resArr.count {
+            res = res + resArr[i] + "/"
+        }
+        res.removeLast()
+        return res
+    }
+    
+}

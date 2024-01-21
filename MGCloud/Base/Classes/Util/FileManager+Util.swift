@@ -1,3 +1,69 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:02e20a32af614dbb06387b4003562699208bcc07b9deef8b4d55760d8854fb92
-size 1483
+//
+//  FileManager+Util.swift
+//  MGCloud
+//
+//  Created by sugc on 2023/10/21.
+//
+
+import Foundation
+
+extension  FileManager {
+    
+    func deleteDictionaryRecursiveAtPath(path:String)->Bool {
+        
+        var flag : ObjCBool = false
+        
+        if !self.fileExists(atPath: path, isDirectory: &flag) {
+            
+            return false
+        }
+        
+        if flag.boolValue {
+            var subPaths : Array<String> = []
+            do {
+                subPaths = try self.contentsOfDirectory(atPath: path)
+            }catch {
+                
+                print(error)
+                return false
+            }
+            
+        
+            
+            for subPath in subPaths {
+                let finalPath = path + "/" + subPath
+                if deleteDictionaryRecursiveAtPath(path: finalPath) == false {
+                    
+                    print("xxxxxxxxxxxxx")
+                    return false
+                }
+            }
+            
+            do {
+                try removeItem(atPath: path)
+            }catch {
+                
+                return false
+            }
+            
+        }else {
+            do {
+                try removeItem(atPath: path)
+            }catch {
+                
+                return false
+            }
+            
+            return true
+        }
+        
+        return true
+    }
+    
+    func getValidTempPathNewFile()->String {
+        
+    
+        
+       return ""
+    }
+}
