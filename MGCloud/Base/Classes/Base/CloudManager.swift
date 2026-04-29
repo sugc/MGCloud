@@ -280,8 +280,8 @@ public class CloudManager : NSObject, CloudManagerProtocl {
         if operations.isEmpty {
             return
         }
-        let currentOperations = self.operationQueue.operations as? Array<CloudOperation> ?? []
         
+        let currentOperations = self.operationQueue.operations as? Array<CloudOperation> ?? []
         for operation in currentOperations {
             if operations.contains(where: { obj in
                 return obj == operation.operationObj
@@ -373,9 +373,13 @@ public class CloudManager : NSObject, CloudManagerProtocl {
   
     
     func processAfterTaskFinished(task:CloudOpeationObj) {
+        
         if task.actionType == .delete {
             self.deletRemoteItem(remoteUrl: task.remoteUrl)
         }else {
+            if task.autoUpdateModifyTime && task.localUrl != nil{
+                try! FileManager.default.setAttributes([.modificationDate:Date().addingTimeInterval(2)], ofItemAtPath: task.localUrl!.path)
+            }
             self.addRemoteItem(localUrl: task.localUrl!, remoteUrl: task.remoteUrl)
         }
     }

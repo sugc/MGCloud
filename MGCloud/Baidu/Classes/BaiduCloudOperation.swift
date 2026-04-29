@@ -39,6 +39,8 @@ class BaiduCloudOperation : CloudOperation {
                 return
             }
             
+        
+            
             guard let nonnilModel = model else {
                 completion?(self.operationObj, CloudOperationError.sysFailed(reason: .unKnown))
                 return
