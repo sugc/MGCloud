@@ -1,3 +1,19 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:4b4cc0155eb6e61b24beed162ebc0a9db64ea7e33506f6a1a55625277e89da33
-size 378
+//
+//  ResourceUtil.swift
+//  MGCloud
+//
+//  Created by sugc on 2023/12/24.
+//
+
+import Foundation
+import CommonUtil 
+
+public func cloudBundleImage(_ named:String)-> UIImage? {
+    return UIImage.init(name: named, bundleName: "MGCloudResources")
+}
+
+
+public func cloudLocalizedString(_ key:String!)->String {
+    
+    return LocalizedString(key, bundleName: "MGCloudResources")
+}

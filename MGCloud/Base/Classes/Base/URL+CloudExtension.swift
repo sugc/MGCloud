@@ -1,3 +1,27 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:7f026e580f1c57bfc91d69af9ef134176bc568b5d89b1c6ad9346d8f6dd237cb
-size 414
+//
+//  URL+CloudExtension.swift
+//  MGCloud
+//
+//  Created by sugc on 2023/10/13.
+//
+
+import Foundation
+
+
+extension URL {
+    
+    func cloundType()->CloudType {
+        
+        let str = self.absoluteString
+        
+        if str.hasPrefix("iCloud") {
+            return .apple
+        }
+        
+        if str.hasPrefix("Baidu") {
+            return .badidu
+        }
+        
+        return .unknown
+    }
+}
